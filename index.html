@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3DEEN | Innovación en Impresión 3D</title>
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="./js/main.js"></script>
 
 </head>
 <body>
@@ -95,91 +97,115 @@
 <!-- CATÁLOGO -->
 <main id="catalogo">
   <h2>Catálogo de productos</h2>
-  <section class="catalogo">
-    
-     <div class="card">
-  <img src="./assets/img/vader-mate.png" alt="Mate Darth Vader">
 
-  <h3>Mate Darth Vader</h3>
-
-  <p class="price">$26.000</p>
-
-  <p>
-    Mate impreso en 3D inspirado en Darth Vader.
-    Resistente, liviano y personalizable.
-  </p>
-
-  <a 
-    class="btn btn-primary"
-    href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Mate%20Darth%20Vader%20impreso%20en%203D%20por%20$7.000"
-    target="_blank">
-    Consultar por WhatsApp
-  </a>
-</div>
-
-
-        <!-- Mate Giroscópico -->
-     <div class="card">
-  <img src="./assets/img/mate-giroscopio.jpg" alt="Mate giroscópico">
-
-  <h3>Mate Giroscópico</h3>
-
-  <p class="price">$6500</p>
-
-  <p>
-   Diseño giroscópico que reduce vuelcos. Ideal para escritorio o uso diario. Liviano y resistente.
-  </p>
-
-  <a 
-    class="btn btn-primary"
-    href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Mate%20Darth%20Vader%20impreso%20en%203D%20por%20$7.000"
-    target="_blank">
-    Consultar por WhatsApp
-  </a>
-
-</div>
-
-  
   <section class="catalogo">
 
-    <!-- Llavero Soporte Celular -->
-    <div class="card">
-<div class="swiper product-swiper">
-  <div class="swiper-wrapper">
+    <!-- Producto 1 -->
+    <article class="card">
+      <img src="./assets/img/vader-mate.png" alt="Mate Darth Vader">
 
-    <div class="swiper-slide">
-      <img src="./assets/img/soporte-personalizado-1.png" alt="Mate Darth Vader vista frontal">
-    </div>
+      <h3>Mate Darth Vader</h3>
+      <p class="price">$26.000</p>
 
-    <div class="swiper-slide">
-      <img src="./assets/img/soporte-personalizado.jpg" alt="Mate Darth Vader vista lateral">
-    </div>
+      <p>
+        Mate impreso en 3D inspirado en Darth Vader.
+        Resistente, liviano y personalizable.
+      </p>
 
-  </div>
+      <a
+        class="btn btn-primary"
+        href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Mate%20Darth%20Vader%20impreso%20en%203D"
+        target="_blank">
+        Consultar por WhatsApp
+      </a>
+    </article>
 
-  <!-- Paginación -->
-  <div class="swiper-pagination"></div>
-</div>
+    <!-- Producto 2 -->
+    <article class="card">
+      <img src="./assets/img/mate-giroscopio.jpg" alt="Mate giroscópico">
 
-  <h3>Llaveros soporte de celular personalizados</h3>
+      <h3>Mate Giroscópico</h3>
+      <p class="price">$6.500</p>
 
-  <p class="price">$3.500</p>
+      <p>
+        Diseño giroscópico que reduce vuelcos.
+        Ideal para escritorio o uso diario.
+      </p>
 
-  <p>
-    Llavero soporte de celular personalizado.
-    Resistente, liviano y personalizable.
-  </p>
+      <a
+        class="btn btn-primary"
+        href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Mate%20Giroscopico"
+        target="_blank">
+        Consultar por WhatsApp
+      </a>
+    </article>
 
-  <a 
-    class="btn btn-primary"
-    href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Mate%20Darth%20Vader%20impreso%20en%203D%20por%20$26000"
-    target="_blank">
-    Consultar por WhatsApp
-  </a>
-</div>
+    <!-- Producto 3 -->
+    <article class="card">
+      <div class="swiper product-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./assets/img/soporte-personalizado-1.png" alt="Soporte celular vista 1">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/img/soporte-personalizado.jpg" alt="Soporte celular vista 2">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <h3>Llavero soporte de celular personalizado</h3>
+      <p class="price">$3.500</p>
+
+      <p>
+        Llavero soporte de celular personalizado.
+        Resistente, liviano y práctico.
+      </p>
+
+      <a
+        class="btn btn-primary"
+        href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Llavero%20soporte%20personalizado"
+        target="_blank">
+        Consultar por WhatsApp
+      </a>
+    </article>
+
+    <!-- Producto 4 -->
+    <article class="card">
+      <div class="swiper product-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./assets/img/soporte-celu-1jpg-removebg-preview.png" alt="Soporte celular 1">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/img/soporte-celu-2jpg.jpg" alt="Soporte celular 2">
+          </div>
+          <div class="swiper-slide">
+            <img src="./assets/img/soporte-celu-removebg-preview.png" alt="Soporte celular 3">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <h3>Soporte Plegable para Celular</h3>
+      <p class="price">$4.500</p>
+
+      <p>
+        soporte plegable para celular, ofrece comodidad, versatilidad y estilo. Se pliega fácilmente para llevarlo a cualquier lugar y brinda un ángulo perfecto.
+        Ligero, resistente y listo para usar desde el primer momento.
+      </p>
+
+      <a
+        class="btn btn-primary"
+        href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Llavero%20soporte%20premium"
+        target="_blank">
+        Consultar por WhatsApp
+      </a>
+    </article>
 
   </section>
 </main>
+
 
 
   <!-- FOOTER -->
