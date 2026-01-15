@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mates Impresos en 3D | Diseños Originales y Personalizados</title>
+    <meta name="description" content="Mates impresos en 3D con diseños originales y personalizados. Livianos, resistentes y modernos. Ideales para uso diario o para regalar. Envíos a todo el país.">
+    <meta name="keywords" content="mates impresos en 3D, mate personalizado, mate diseño moderno, mate liviano, mate original, mate impreso">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script defer src="../js/main.js"></script>
@@ -16,15 +18,42 @@
     <img src="../assets/img/logo.png" alt="Logo 3DEEN" class="logo">
   </div>
 
-  <button class="menu-toggle">☰</button>
+  <!-- Botón hamburguesa -->
+  <button class="menu-toggle" aria-label="Abrir menú">☰</button>
 
+  <!-- Contenedor de navegación -->
   <div class="nav-container">
     <nav>
-      <a href="../index.html">Inicio</a>
-      <a href="../pages/mates.html">Mates</a>
+      <a href="index.html">Inicio</a>
+
+      <!-- Dropdown -->
+      <div class="dropdown">
+        <a href="#">Productos ▾</a>
+        <div class="dropdown-content">
+          <a href="../pages/mates.html">Mates</a>
+          <a href="../pages/llaveros.html">Llaveros 3D</a>
+          <a href="#macetas">Macetas</a>
+          <a href="#">Miniaturas</a>
+          <div class="columna">
+            <h4>Soportes</h4>
+            <ul>
+              <li><a href="./pages/soporte-celulares.html">Para Celulares</a></li>
+              <li><a href="#notebooks">Para Notebook</a></li>
+              <li><a href="#auriculares">Para Auriculares</a></li>
+              <li><a href="#tablet">Para Tablet</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <a href="#">Personalizados</a>
-      <a href="contacto.html">Contacto</a>
+      <a href="./pages/contacto.html">Contacto</a>
     </nav>
+  </div>
+
+  <!-- Carrito -->
+  <div class="cart">
+    🛒<span class="cart-count">0</span>
   </div>
 </header>
 
