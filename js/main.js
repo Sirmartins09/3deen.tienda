@@ -44,3 +44,43 @@ document.querySelectorAll(".product-swiper").forEach((swiperEl) => {
     },
   });
 });
+
+// ==============================
+// LIGHTBOX FUNCIONALIDAD
+// ==============================
+const lightboxModal = document.getElementById("lightbox-modal");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".lightbox-close");
+
+// Seleccionamos todas las imágenes dentro de las cards
+const productImages = document.querySelectorAll(".card img");
+
+productImages.forEach((img) => {
+  img.addEventListener("click", function () {
+    lightboxModal.style.display = "block";
+    lightboxImg.src = this.src; // Copia la fuente de la imagen clickeada
+  });
+});
+
+// Cerrar con el botón "X"
+if (closeBtn) {
+  closeBtn.addEventListener("click", () => {
+    lightboxModal.style.display = "none";
+  });
+}
+
+// Cerrar haciendo clic afuera de la imagen
+if (lightboxModal) {
+  lightboxModal.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) {
+      lightboxModal.style.display = "none";
+    }
+  });
+}
+
+// Cerrar con la tecla Escape
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && lightboxModal && lightboxModal.style.display === "block") {
+    lightboxModal.style.display = "none";
+  }
+});
