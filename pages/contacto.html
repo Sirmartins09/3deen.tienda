@@ -1,37 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacto | 3DEEN Impresión 3D</title>
+    <meta name="description" content="¿Tenés dudas o querés un diseño personalizado en 3D? Ponete en contacto con nosotros. Estamos en Mendoza, Argentina.">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
+    <!-- Script defer para las funciones globales -->
+    <script defer src="../js/main.js"></script>
 </head>
 <body>
-    <!-- CONTACTO -->
-<main id="contacto">
-  <h2>Contacto</h2>
-  <section class="contacto">
-    <div class="info">
-      <h3>Estamos para ayudarte</h3>
-      <p>Si tenés dudas sobre productos, pedidos o cualquier consulta, completá el formulario y nos pondremos en contacto.</p>
-      <p><strong>Teléfono:</strong> +54 2615632792</p>
-      <p><strong>Email:</strong> martindn6@gmail.com</p>
-    </div>
 
-    <form class="formulario">
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+    <!-- HEADER UNIFICADO -->
+    <header class="navbar">
+      <div class="logo-container">
+        <img src="../assets/img/watermarked_img_6781641255694717982.png" alt="Logo 3DEEN" class="logo">
+      </div>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required placeholder="tuemail@email.com">
+      <!-- Botón hamburguesa -->
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
 
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu consulta..."></textarea>
+      <!-- Contenedor de navegación -->
+      <div class="nav-container">
+        <nav>
+          <a href="../index.html">Inicio</a>
 
-      <button type="submit" class="btn">Enviar</button>
-    </form>
-  </section>
-</main>
+          <!-- Dropdown -->
+          <div class="dropdown">
+            <a href="#">Productos ▾</a>
+            <div class="dropdown-content">
+              <a href="./mates.html">Mates</a>
+              <a href="./llaveros.html">Llaveros 3D</a>
+              <a href="../index.html#macetas">Macetas</a>
+              <a href="#">Miniaturas</a>
+              
+              <!-- Submenú Soportes -->
+              <div class="submenu">
+                <a href="#">Soportes ▸</a>
+                <div class="submenu-content">
+                  <a href="./soporte-celulares.html">Para Celulares</a>
+                  <a href="../index.html#notebooks">Para Notebook</a>
+                  <a href="../index.html#auriculares">Para Auriculares</a>
+                  <a href="../index.html#tablet">Para Tablet</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="#">Personalizados</a>
+          <a href="./contacto.html" class="active">Contacto</a>
+        </nav>
+      </div>
+
+      <!-- Carrito -->
+      <div class="cart">
+        🛒<span class="cart-count">0</span>
+      </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contacto" style="padding: 60px 20px; max-width: 1000px; margin: 0 auto;">
+      <h2 style="text-align: center; margin-bottom: 40px; font-size: 2.2rem; color: var(--primary-navy);">Contacto</h2>
+      
+      <section class="contacto-wrapper" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+        
+        <!-- Info de contacto izquierda -->
+        <div class="info" style="background-color: var(--card-bg); padding: 30px; border-radius: 12px; box-shadow: var(--shadow-soft);">
+          <h3 style="color: var(--primary-navy); margin-bottom: 15px; font-size: 1.4rem;">Estamos para ayudarte</h3>
+          <p style="color: rgba(26,26,26,0.7); margin-bottom: 25px; line-height: 1.6;">
+            Si tenés dudas sobre productos, pedidos o querés cotizar un diseño personalizado en 3D, completá el formulario.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 15px; color: rgba(26,26,26,0.8);">
+            <p><strong>📱 Teléfono:</strong> +54 261 56 32792</p>
+            <p><strong>📧 Email:</strong> martindn6@gmail.com</p>
+            <p><strong>📍 Ubicación:</strong> Mendoza, Argentina</p>
+          </div>
+        </div>
+
+        <!-- Formulario interactivo derecha -->
+        <form class="formulario" id="whatsapp-form" style="display: flex; flex-direction: column; gap: 15px; background-color: var(--card-bg); padding: 30px; border-radius: 12px; box-shadow: var(--shadow-soft);">
+          <div>
+            <label for="nombre" style="display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem;">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 6px; box-sizing: border-box;">
+          </div>
+
+          <div>
+            <label for="email" style="display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem;">Email</label>
+            <input type="email" id="email" name="email" required placeholder="tuemail@email.com" style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 6px; box-sizing: border-box;">
+          </div>
+
+          <div>
+            <label for="mensaje" style="display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem;">Mensaje / Idea 3D</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribí acá tu consulta o las especificaciones de tu pieza..." style="width: 100%; padding: 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 6px; box-sizing: border-box; resize: none;"></textarea>
+          </div>
+
+          <!-- Botón adaptado a tu estilo de diseño -->
+          <button type="submit" class="btn-whatsapp" style="border: none; cursor: pointer; text-align: center; justify-content: center; width: 100%; padding: 14px; font-weight: 600;">
+            Enviar consulta por WhatsApp 💬
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- FOOTER UNIFICADO -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-logo">
+          <img src="../assets/img/watermarked_img_6781641255694717982.png" alt="Logo 3DEEN" class="logo">
+          <p>Innovación impresa, estilo que perdura.</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <p>📧 contacto@3deen.com</p>
+          <p>📱 +54 261 56 32792</p>
+          <p>📍 Mendoza, Argentina</p>
+        </div>
+        <div class="footer-social">
+          <h4>Síguenos</h4>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <p>&copy; 2026 3DEEN | Todos los derechos reservados</p>
+      </div>
+    </footer>
+
+    <!-- JS de automatización de WhatsApp -->
+    <script>
+        document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita que recargue la página vieja
+            
+            // Captura los valores del formulario
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            // Tu número de WhatsApp estructurado para la API
+            const telefono = "5492615632792"; 
+            
+            // Arma el mensaje codificado para URL de forma prolija
+            const textoMensaje = `Hola 3DEEN! Mi nombre es ${nombre} (${email}). Te quería consultar lo siguiente: ${mensaje}`;
+            const urlWhatsApp = `https://wa.me/${telefono}?text=${encodeURIComponent(textoMensaje)}`;
+            
+            // Abre la pestaña de WhatsApp directamente con el texto listo
+            window.open(urlWhatsApp, '_blank');
+        });
+    </script>
 
 </body>
 </html>

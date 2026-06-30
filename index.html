@@ -3,190 +3,263 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3DEEN | Innovación en Impresión 3D</title>
+  <title>3DEEN | Precisión, Estilo e Innovación en Impresión 3D</title>
+  
+  <!-- Tipografía Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  
+  <!-- Favicon (Usar el isotipo cubo de tu logo) -->
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script defer src="./js/main.js"></script>
 </head>
 <body>
+
+  <!-- ======================== HEADER / NAVBAR ======================== -->
   <header class="navbar">
-    <div class="logo-container">
-      <img src="./assets/img/logo.png" alt="Logo 3DEEN" class="logo">
-    </div>
+    <div class="container nav-wrapper">
+      <div class="logo-container">
+        <!-- Reemplazar por tu PNG transparente -->
+        <img src="./assets/img/logo (1).jpg" alt="Logo 3DEEN" class="logo">
+      </div>
 
-    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-    <div class="nav-container">
-      <nav>
-        <a href="index.html">Inicio</a>
-
-        <div class="dropdown">
-          <a href="#">Productos ▾</a>
-          <div class="dropdown-content">
-            <a href="./pages/mates.html">Mates</a>
-            <a href="./pages/llaveros.html">Llaveros 3D</a>
-            <a href="#macetas">Macetas</a>
-            <a href="#">Miniaturas</a>
-            <div class="columna">
-              <h4>Soportes</h4>
-              <ul>
-                <li><a href="./pages/soporte-celulares.html">Para Celulares</a></li>
-                <li><a href="#notebooks">Para Notebook</a></li>
-                <li><a href="#auriculares">Para Auriculares</a></li>
-                <li><a href="#tablet">Para Tablet</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <a href="#">Personalizados</a>
-        <a href="./pages/contacto.html">Contacto</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Productos ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="./pages/mates.html">Mates</a></li>
+              <li><a href="./pages/llaveros.html">Llaveros 3D</a></li>
+              <li><a href="#macetas">Macetas</a></li>
+              <li><a href="#">Miniaturas</a></li>
+              <li class="submenu">
+                <a href="#">Soportes ▸</a>
+                <ul class="submenu-content">
+                  <li><a href="./pages/soporte-celulares.html">Celulares</a></li>
+                  <li><a href="#notebooks">Notebooks</a></li>
+                  <li><a href="#auriculares">Auriculares</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#contacto">Personalizados</a></li>
+          <li><a href="./pages/contacto.html">Contacto</a></li>
+        </ul>
       </nav>
-    </div>
 
-    <div class="cart">
-      🛒<span class="cart-count">0</span>
+      <!-- <div class="header-actions">
+        <div class="cart">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-count">0</span>
+        </div>
+      </div> -->
     </div>
   </header>
 
+  <!-- ======================== HERO SECTION ======================== -->
   <section class="hero">
     <div class="swiper hero-swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="./assets/img/slider1.jpg" alt="Slide 1" class="hero-img">
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/img/sileder2.jpg" alt="Slide 2" class="hero-img">
-        </div>
-        <div class="swiper-slide">
-          <img src="./assets/img/slider3.jpg" alt="Slide 3" class="hero-img">
-        </div>
+        <div class="swiper-slide" style="background-image: url('./assets/img/Gemini_Generated_Image_r5zzyer5zzyer5zz.png');"></div>
+        <div class="swiper-slide" style="background-image: url('./assets/img/slider1.jpg');"></div>
+      
+
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="hero-overlay"></div>
     </div>
 
-    <div class="hero-content">
-      <img src="./assets/img/logo.png" alt="Logo 3DEEN" class="hero-logo">
-      <h2>Impresión 3D con estilo e innovación</h2>
-      <p>Diseños únicos, personalizados y modernos hechos a medida.</p>
-      <a href="#catalogo" class="btn">Ver Catálogo</a>
+    <div class="hero-content container">
+      <!-- Isotipo solo del logo, sin texto, opcional para más minimalismo -->
+      <!-- <img src="./assets/img/logo-isotipo.png" alt="Icono 3DEEN" class="hero-logo"> -->
+      <h1 class="hero-title">Precisión que <span class="text-accent">impresiona</span>.</h1>
+      <p class="hero-subtitle">Mates, soportes y diseños únicos, personalizados para vos con tecnología 3D de vanguardia.</p>
+      <div class="hero-btns">
+        <a href="#catalogo" class="btn btn-primary">Ver Catálogo</a>
+        <a href="./pages/contacto.html" class="btn btn-secondary">Cotizar Diseño</a>
+      </div>
     </div>
+    
+    <div class="swiper-pagination"></div>
   </section>
 
-  <main id="catalogo">
-    <h2>Catálogo de productos</h2>
+  <!-- ======================== MAIN CATALOGO ======================== -->
+  <main id="catalogo" class="container">
+    <header class="section-header">
+      <h2 class="section-title">Colección Destacada</h2>
+      <p class="section-subtitle">Lo último en diseño y funcionalidad 3D.</p>
+    </header>
 
-    <section class="catalogo">
-      <article class="card">
-        <img src="./assets/img/vader-mate.png" alt="Mate Darth Vader">
-        <h3>Mate Darth Vader</h3>
-        <p class="price">$26.000</p>
-        <p class="desc">
-          Mate impreso en 3D inspirado en Darth Vader.
-          Resistente, liviano y personalizable.
-        </p>
-        <a class="btn btn-primary" href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Mate%20Darth%20Vader%20impreso%20en%203D" target="_blank">
-          Consultar por WhatsApp
-        </a>
-      </article>
-
-      <article class="card">
-        <img src="./assets/img/mate-giroscopio.jpg" alt="Mate giroscópico">
-        <h3>Mate Giroscópico</h3>
-        <p class="price">$6.500</p>
-        <p class="desc">
-          Diseño giroscópico que reduce vuelcos.
-          Ideal para escritorio o uso diario.
-        </p>
-        <a class="btn btn-primary" href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Mate%20Giroscopico" target="_blank">
-          Consultar por WhatsApp
-        </a>
-      </article>
-
-      <article class="card">
-        <div class="swiper product-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./assets/img/soporte-personalizado-1.png" alt="Soporte celular vista 1">
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/img/soporte-personalizado.jpg" alt="Soporte celular vista 2">
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
+ <section class="catalogo-grid">
+      
+      <article class="product-card">
+        <div class="card-img-container">
+          <img src="./assets/img/vader-mate.png" alt="Mate Darth Vader">
         </div>
-        <h3>Llavero soporte celular</h3>
-        <p class="price">$3.500</p>
-        <p class="desc">
-          Llavero soporte de celular personalizado.
-          Resistente, liviano y práctico.
-        </p>
-        <a class="btn btn-primary" href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Llavero%20soporte%20personalizado" target="_blank">
-          Consultar por WhatsApp
-        </a>
+        <div class="card-body">
+          <span class="category">Bazar</span>
+          <h3 class="product-title">Mate Darth Vader</h3>
+          <p class="desc">Réplica detallada, resistente al calor. Incluye bombilla.</p>
+          <div class="card-footer">
+            <p class="price">$26.000</p>
+            <a class="btn-whatsapp" href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Mate%20Darth%20Vader%20impreso%20en%203D" target="_blank">
+              Consultar
+            </a>
+          </div>
+        </div>
       </article>
 
-      <article class="card">
-        <div class="swiper product-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./assets/img/soporte-celu-1jpg-removebg-preview.png" alt="Soporte celular 1">
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/img/soporte-celu-2jpg.jpg" alt="Soporte celular 2">
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/img/soporte-celu-removebg-preview.png" alt="Soporte celular 3">
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
+      <article class="product-card">
+        <div class="card-img-container">
+          <img src="./assets/img/mate-giroscopio.jpg" alt="Mate giroscópico">
         </div>
-        <h3>Soporte Plegable Celular</h3>
-        <p class="price">$4.500</p>
-        <p class="desc">
-          Ofrece comodidad, versatilidad y estilo. Se pliega fácilmente para llevarlo a cualquier lugar. Ligero y resistente.
-        </p>
-        <a class="btn btn-primary" href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Llavero%20soporte%20premium" target="_blank">
-          Consultar por WhatsApp
-        </a>
+        <div class="card-body">
+          <span class="category">Innovación</span>
+          <h3 class="product-title">Mate Giroscópico</h3>
+          <p class="desc">Diseño anti-vuelcos. Perfecto para escritorios activos.</p>
+          <div class="card-footer">
+            <p class="price">$6.500</p>
+            <a class="btn-whatsapp" href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Mate%20Giroscopico" target="_blank">
+              Consultar
+            </a>
+          </div>
+        </div>
       </article>
 
-      <article class="card">
-        <div class="swiper product-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./assets/img/org-1.png" alt="Organizador de oficina frontal">
+      <article class="product-card">
+        <div class="card-img-container product-swiper-container">
+          <div class="swiper product-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./assets/img/soporte-personalizado-1.png" alt="Soporte vista 1"></div>
+              <div class="swiper-slide"><img src="./assets/img/soporte-personalizado.jpg" alt="Soporte vista 2"></div>
             </div>
-            <div class="swiper-slide">
-              <img src="./assets/img/org-2.png" alt="Organizador de oficina lateral">
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/img/org-3.png" alt="Organizador de oficina módulos">
-            </div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
-        <h3>Organizador Modular</h3>
-        <p class="price">$26.000</p>
-        <p class="desc">
-          Diseño modular y funcional. Incluye bandeja, porta bolígrafos y soporte para celular. Estilo moderno y resistente.
-        </p>
-        <a class="btn btn-primary" href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Organizador%20de%20Oficina%20Modular%203D" target="_blank">
-          Consultar por WhatsApp
-        </a>
+        <div class="card-body">
+          <span class="category">Accesorio</span>
+          <h3 class="product-title">Llavero soporte celular</h3>
+          <p class="desc">Práctico, liviano y personalizable con tu nombre.</p>
+          <div class="card-footer">
+            <p class="price">$3.500</p>
+            <a class="btn-whatsapp" href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Llavero%20soporte%20personalizado" target="_blank">
+              Consultar
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="card-img-container product-swiper-container">
+          <div class="swiper product-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./assets/img/soporte-celu-1jpg-removebg-preview.png" alt="Soporte celu 1"></div>
+              <div class="swiper-slide"><img src="./assets/img/soporte-celu-removebg-preview.png" alt="Soporte celu 3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="category">Oficina</span>
+          <h3 class="product-title">Soporte Plegable Celular</h3>
+          <p class="desc">Versátil, ergonómico y ultra resistente.</p>
+          <div class="card-footer">
+            <p class="price">$4.500</p>
+            <a class="btn-whatsapp" href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Soporte%20Plegable%20Premium" target="_blank">
+              Consultar
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="card-img-container product-swiper-container">
+          <div class="swiper product-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./assets/img/Gemini_Generated_Image_hqdtkbhqdtkbhqdt.png" alt="Bandeja picada argentina vista general"></div>
+              <div class="swiper-slide"><img src="./assets/img/precio 1.png" alt="Bandeja picada argentina detalle"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="category">Bazar & Juntadas</span>
+          <h3 class="product-title">Bandeja Picada de Argentina</h3>
+          <p class="desc">Diseño exclusivo con la silueta de nuestro país. Ideal para regalar o lucirte en tus previas y asados. Material lavable.</p>
+          <div class="card-footer">
+            <p class="price">$20.000</p>
+            <a class="btn-whatsapp" href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20consultar%20por%20la%20Bandeja%20Picada%20de%20Argentina" target="_blank">
+              Consultar
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card highlight">
+        <div class="card-img-container">
+          <img src="./assets/img/org-1.png" alt="Organizador modular">
+        </div>
+        <div class="card-body">
+          <span class="category premium">Premium</span>
+          <h3 class="product-title">Organizador Modular</h3>
+          <p class="desc">Diseño modular para bolígrafos y celular. Tu escritorio, perfectamente ordenado y tecnológico.</p>
+          <div class="card-footer">
+            <p class="price">$26.000</p>
+            <a class="btn-whatsapp" href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Organizador%20de%20Oficina%20Modular%203D" target="_blank">
+              Consultar
+            </a>
+          </div>
+        </div>
       </article>
 
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 3DEEN | Todos los derechos reservados</p>
-    <p>📧 contacto@3deen.com | 📱 +54 261 56 32792</p>
-  </footer>
+  <!-- ======================== FOOTER CORREGIDO ======================== -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-logo">
+      <!-- Cambiamos la ruta al archivo correcto y la clase a .logo -->
+      <img src="./assets/img/logo (1).jpg" alt="Logo 3DEEN" class="logo">
+      <p>Innovación impresa, estilo que perdura.</p>
+    </div>
+    <div class="footer-contact">
+      <h4>Contacto</h4>
+      <p>📧 contacto@3deen.com</p>
+      <p>📱 +54 261 56 32792</p>
+      <p>📍 Mendoza, Argentina</p>
+    </div>
+    <div class="footer-social">
+      <h4>Síguenos</h4>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <p>&copy; 2026 3DEEN | Todos los derechos reservados</p>
+  </div>
+</footer>
 
+  <!-- ======================== COMPONENTES EXTRAS ======================== -->
+  
+  <!-- Botón de WhatsApp Flotante Novedoso -->
+  <a href="https://wa.me/5492615632792?text=Hola%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
+  <!-- Lightbox Modal (Mejorado) -->
   <div id="lightbox-modal" class="lightbox">
     <span class="lightbox-close">&times;</span>
     <img class="lightbox-content" id="lightbox-img" alt="Imagen ampliada">
