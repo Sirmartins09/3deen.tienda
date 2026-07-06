@@ -5,27 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3DEEN | Precisión, Estilo e Innovación en Impresión 3D</title>
   
-  <!-- Tipografía Google Fonts: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  
-  <!-- Favicon (Usar el isotipo cubo de tu logo) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script defer src="./js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <script>
+    // Inicializa el efecto en todas tus tarjetas de producto
+    VanillaTilt.init(document.querySelectorAll(".product-card"), {
+      max: 15,          /* Grados máximos de inclinación */
+      speed: 400,         /* Velocidad de la transición */
+      glare: true,        /* Agrega un efecto de brillo/reflejo reflectivo */
+      "max-glare": 0.2,   /* Opacidad máxima del brillo */
+    });
+  </script>
 </head>
-<body>
+<>
 
-  <!-- ======================== HEADER / NAVBAR ======================== -->
   <header class="navbar">
     <div class="container nav-wrapper">
       <div class="logo-container">
-        <!-- Reemplazar por tu PNG transparente -->
         <img src="./assets/img/logo (1).jpg" alt="Logo 3DEEN" class="logo">
       </div>
 
@@ -52,40 +58,27 @@
                   <li><a href="#notebooks">Notebooks</a></li>
                   <li><a href="#auriculares">Auriculares</a></li>
                 </ul>
-              </li>
+              </li class="submenu">
             </ul>
           </li>
-          <li><a href="#contacto">Personalizados</a></li>
           <li><a href="./pages/contacto.html">Contacto</a></li>
         </ul>
       </nav>
-
-      <!-- <div class="header-actions">
-        <div class="cart">
-          <span class="cart-icon">🛒</span>
-          <span class="cart-count">0</span>
-        </div>
-      </div> -->
     </div>
   </header>
 
-  <!-- ======================== HERO SECTION ======================== -->
   <section class="hero">
     <div class="swiper hero-swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide" style="background-image: url('./assets/img/Gemini_Generated_Image_r5zzyer5zzyer5zz.png');"></div>
         <div class="swiper-slide" style="background-image: url('./assets/img/slider1.jpg');"></div>
-      
-
       </div>
       <div class="hero-overlay"></div>
     </div>
 
     <div class="hero-content container">
-      <!-- Isotipo solo del logo, sin texto, opcional para más minimalismo -->
-      <!-- <img src="./assets/img/logo-isotipo.png" alt="Icono 3DEEN" class="hero-logo"> -->
       <h1 class="hero-title">Precisión que <span class="text-accent">impresiona</span>.</h1>
-      <p class="hero-subtitle">Mates, soportes y diseños únicos, personalizados para vos con tecnología 3D de vanguardia.</p>
+      <p class="hero-subtitle">Mates, soportes y designs únicos, personalizados para vos con tecnología 3D de vanguardia.</p>
       <div class="hero-btns">
         <a href="#catalogo" class="btn btn-primary">Ver Catálogo</a>
         <a href="./pages/contacto.html" class="btn btn-secondary">Cotizar Diseño</a>
@@ -95,16 +88,25 @@
     <div class="swiper-pagination"></div>
   </section>
 
-  <!-- ======================== MAIN CATALOGO ======================== -->
   <main id="catalogo" class="container">
     <header class="section-header">
       <h2 class="section-title">Colección Destacada</h2>
       <p class="section-subtitle">Lo último en diseño y funcionalidad 3D.</p>
     </header>
 
- <section class="catalogo-grid">
+    <nav class="catalog-filters" aria-label="Filtrar catálogo de productos">
+      <ul>
+        <li><button class="filter-btn active" data-category="todos">Todos</button></li>
+        <li><button class="filter-btn" data-category="mates">Mates</button></li>
+        <li><button class="filter-btn" data-category="soportes">Soportes</button></li>
+        <li><button class="filter-btn" data-category="organizadores">Organizadores</button></li>
+        <li><button class="filter-btn" data-category="bazar">Bazar & Juntadas</button></li>
+      </ul>
+    </nav>
+
+    <section class="catalogo-grid">
       
-      <article class="product-card">
+      <article class="product-card" data-category="mates">
         <div class="card-img-container">
           <img src="./assets/img/vader-mate.png" alt="Mate Darth Vader">
         </div>
@@ -121,7 +123,7 @@
         </div>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" data-category="mates">
         <div class="card-img-container">
           <img src="./assets/img/mate-giroscopio.jpg" alt="Mate giroscópico">
         </div>
@@ -138,7 +140,7 @@
         </div>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" data-category="soportes">
         <div class="card-img-container product-swiper-container">
           <div class="swiper product-swiper">
             <div class="swiper-wrapper">
@@ -161,7 +163,7 @@
         </div>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" data-category="soportes">
         <div class="card-img-container product-swiper-container">
           <div class="swiper product-swiper">
             <div class="swiper-wrapper">
@@ -184,7 +186,7 @@
         </div>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" data-category="bazar">
         <div class="card-img-container product-swiper-container">
           <div class="swiper product-swiper">
             <div class="swiper-wrapper">
@@ -207,7 +209,7 @@
         </div>
       </article>
 
-      <article class="product-card highlight">
+      <article class="product-card highlight" data-category="organizadores">
         <div class="card-img-container">
           <img src="./assets/img/org-1.png" alt="Organizador modular">
         </div>
@@ -227,43 +229,85 @@
     </section>
   </main>
 
-  <!-- ======================== FOOTER CORREGIDO ======================== -->
-<footer class="footer">
-  <div class="container footer-grid">
-    <div class="footer-logo">
-      <!-- Cambiamos la ruta al archivo correcto y la clase a .logo -->
-      <img src="./assets/img/logo (1).jpg" alt="Logo 3DEEN" class="logo">
-      <p>Innovación impresa, estilo que perdura.</p>
-    </div>
-    <div class="footer-contact">
-      <h4>Contacto</h4>
-      <p>📧 contacto@3deen.com</p>
-      <p>📱 +54 261 56 32792</p>
-      <p>📍 Mendoza, Argentina</p>
-    </div>
-    <div class="footer-social">
-      <h4>Síguenos</h4>
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-    </div>
-  </div>
-  <div class="footer-bottom container">
-    <p>&copy; 2026 3DEEN | Todos los derechos reservados</p>
-  </div>
-</footer>
+  <section class="workflow-section">
+    <div class="container">
+      <header class="section-header">
+        <h2 class="section-title">De tu idea a la <span class="text-accent">realidad</span></h2>
+        <p class="section-subtitle">¿Cómo creamos tus piezas personalizadas con tecnología de vanguardia?</p>
+      </header>
 
-  <!-- ======================== COMPONENTES EXTRAS ======================== -->
-  
-  <!-- Botón de WhatsApp Flotante Novedoso -->
+      <div class="workflow-grid">
+        <article class="workflow-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="workflow-icon-box">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h3 class="workflow-step-title">1. Idea o Diseño</h3>
+          <p class="workflow-step-desc">Elegís un modelo de nuestro catálogo o nos enviás tus archivos STL/ideas para modelar desde cero.</p>
+        </article>
+
+        <article class="workflow-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="workflow-icon-box">
+            <i class="fa-solid fa-cubes"></i>
+          </div>
+          <h3 class="workflow-step-title">2. Material y Color</h3>
+          <p class="workflow-step-desc">Seleccionamos filamentos PLA de alta calidad: opciones clásicas, acabados Silk metalizados o texturas especiales.</p>
+        </article>
+
+        <article class="workflow-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="workflow-icon-box">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <h3 class="workflow-step-title">3. Impresión de Precisión</h3>
+          <p class="workflow-step-desc">Fabricamos tu pieza capa por capa con parámetros calibrados al detalle para garantizar resistencia y estilo.</p>
+        </article>
+      </div>
+
+      <div class="workflow-actions" data-aos="zoom-in" data-aos-delay="600">
+        <a href="./pages/contacto.html" class="btn btn-primary">Cotizar un Diseño Propio</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-logo">
+        <img src="./assets/img/logo (1).jpg" alt="Logo 3DEEN" class="logo">
+        <p>Innovación impresa, estilo que perdura.</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p>📧 contacto@3deen.com</p>
+        <p>📱 +54 261 56 32792</p>
+        <p>📍 Mendoza, Argentina</p>
+      </div>
+      <div class="footer-social">
+        <h4>Síguenos</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 3DEEN | Todos los derechos reservados</p>
+    </div>
+  </footer>
+
   <a href="https://wa.me/5492615632792?text=Hola%2C%20vengo%20de%20la%20web%20y%20tengo%20una%20consulta." class="whatsapp-float" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
 
-  <!-- Lightbox Modal (Mejorado) -->
   <div id="lightbox-modal" class="lightbox">
     <span class="lightbox-close">&times;</span>
     <img class="lightbox-content" id="lightbox-img" alt="Imagen ampliada">
   </div>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    // Inicializamos las animaciones con una configuración fluida
+    AOS.init({
+      duration: 1000, /* Duración de la animación en milisegundos (1 segundo) */
+      once: true,     /* True significa que la animación ocurre una sola vez al bajar */
+      offset: 120     /* Comienza la animación 120px antes de que el elemento aparezca en pantalla */
+    });
+  </script>
 
 </body>
 </html>

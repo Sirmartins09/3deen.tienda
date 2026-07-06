@@ -1,26 +1,30 @@
 /* ============================================================
-   3DEEN | CSS Principal | Estilo Premium & Responsivo
+   3DEEN | CSS Principal | Estilo Premium, Minimalista & Responsivo
    ============================================================ */
 
-/* --- 1. Variables y Reset --- */
+/* --- 1. VARIABLES Y RESET --- */
 :root {
-    --primary-navy: #32577c; /* Fondo Navy profundo del logo */
-    --accent-cyan: #00D9FF;  /* Cyan eléctrico del logo */
-    --text-dark: #1A1A1A;    /* Texto casi negro */
-    --text-light: #F4F7F6;   /* Texto claro / Fondos suaves */
+    /* Paleta de colores basada en la identidad de marca */
+    --primary-navy: #32577c;       /* Fondo Navy profundo del logo */
+    --accent-cyan: #00D9FF;        /* Cyan eléctrico de acento */
+    --text-dark: #1A1A1A;          /* Texto casi negro de alta legibilidad */
+    --text-light: #F4F7F6;         /* Texto claro / Fondos suaves de sección */
     --white: #FFFFFF;
     
+    /* Fondos semánticos */
     --body-bg: #FFFFFF;
     --card-bg: #FFFFFF;
     
+    /* Tipografía y Animación */
     --font-main: 'Poppins', sans-serif;
     --transition: all 0.3s ease;
     
-    --shadow-soft: 0 4px 6px rgba(0,0,0,0.05);
-    --shadow-hover: 0 10px 20px rgba(0,0,0,0.1);
+    /* Elevaciones / Sombras UX */
+    --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -39,17 +43,34 @@ body {
     overflow-x: hidden;
 }
 
+/* --- 2. LAYOUT / UTILITIES --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-a { text-decoration: none; color: inherit; transition: var(--transition); }
-ul { list-style: none; }
-img { max-width: 100%; height: auto; }
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
 
-/* --- 2. Botones Globales --- */
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-accent {
+    color: var(--accent-cyan);
+}
+
+/* --- 3. BOTONES GLOBALES --- */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -60,6 +81,8 @@ img { max-width: 100%; height: auto; }
     letter-spacing: 1px;
     cursor: pointer;
     border: 2px solid transparent;
+    text-align: center;
+    transition: var(--transition);
 }
 
 .btn-primary {
@@ -82,17 +105,20 @@ img { max-width: 100%; height: auto; }
 .btn-secondary:hover {
     background-color: var(--white);
     color: var(--primary-navy);
+    transform: translateY(-3px);
 }
 
-/* Botón WhatsApp en Tarjetas */
+/* Botón WhatsApp integrado en Tarjetas */
 .btn-whatsapp {
     background-color: transparent;
-    color: #25D366; /* Verde WA */
+    color: #25D366; /* Verde oficial WhatsApp */
     border: 1px solid #25D366;
     padding: 8px 18px;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
+    display: inline-block;
+    text-align: center;
 }
 
 .btn-whatsapp:hover {
@@ -100,21 +126,18 @@ img { max-width: 100%; height: auto; }
     color: var(--white);
 }
 
-/* Texto Acento Cyan */
-.text-accent {
-    color: var(--accent-cyan);
-}
-
-/* --- 3. Header / Navbar (Sticky & Translucido) --- */
+/* --- 4. HEADER / NAVBAR (Sticky & Glassmorphism) --- */
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: 80px;
-    background-color: rgba(10, 37, 64, 0.95); /* Navy del logo con transparencia */
-    backdrop-filter: blur(10px); /* Efecto Glassmorphism */
+    background-color: rgba(10, 37, 64, 0.95); /* Navy con opacidad */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 1000;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     transition: var(--transition);
 }
 
@@ -125,21 +148,22 @@ img { max-width: 100%; height: auto; }
     height: 100%;
 }
 
-/* --- Selector ultra específico para el Logo del Header --- */
+/* Selector ultra-específico para el Isotipo Circular */
 .navbar .logo-container img.logo {
     width: 80px;
     height: 70px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
-    background-color: #ffffff;
+    background-color: var(--white);
     border: 2px solid var(--accent-cyan);
-    box-sizing: border-box;
-    display: block; /* Evita espacios vacíos raros abajo de la imagen */
+    display: block;
 }
+
 .main-nav ul {
     display: flex;
     gap: 30px;
+    align-items: center;
 }
 
 .main-nav a {
@@ -166,17 +190,17 @@ img { max-width: 100%; height: auto; }
     width: 100%;
 }
 
-/* --- Dropdowns Ajustados --- */
-.dropdown { 
-    position: relative; 
+/* --- Dropdowns (Menú Desplegable) --- */
+.dropdown {
+    position: relative;
 }
 
 .dropdown-content {
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%) translateY(10px); /* Centrado respecto a "Productos" */
-    background-color: rgba(10, 37, 64, 0.98); /* Navy sólido para contraste */
+    transform: translateX(-50%) translateY(10px);
+    background-color: rgba(10, 37, 64, 0.98);
     width: 220px;
     opacity: 0;
     visibility: hidden;
@@ -185,25 +209,18 @@ img { max-width: 100%; height: auto; }
     box-shadow: var(--shadow-hover);
     padding: 10px 0;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    
-    /* Forzamos a que los elementos internos no se alineen en fila */
     display: flex;
     flex-direction: column;
 }
 
-/* Al hacer hover, se muestra con un sutil desplazamiento hacia arriba */
 .dropdown:hover .dropdown-content {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
 }
 
-/* Ajuste de cada ítem de la lista desplegable */
 .dropdown-content li {
     width: 100%;
-    display: block;
-    margin: 0;
-    padding: 0;
 }
 
 .dropdown-content a {
@@ -214,23 +231,21 @@ img { max-width: 100%; height: auto; }
     font-weight: 400;
     text-align: left;
     width: 100%;
-    transition: var(--transition);
 }
 
-/* Quitamos la línea animada de fondo para los ítems del submenú */
 .dropdown-content a::after {
-    display: none !important;
+    display: none !important; /* Desactiva la barra inferior en submenús */
 }
 
 .dropdown-content a:hover {
     color: var(--accent-cyan) !important;
     background-color: rgba(255, 255, 255, 0.05);
-    padding-left: 25px; /* Efecto sutil de desplazamiento al pasar el mouse */
+    padding-left: 25px; /* Sutil desplazamiento UX */
 }
 
-/* --- Submenú "Soportes" ▸ (Hacia el costado) --- */
-.submenu { 
-    position: relative; 
+/* Submenú lateral "Soportes" */
+.submenu {
+    position: relative;
 }
 
 .submenu-content {
@@ -247,7 +262,6 @@ img { max-width: 100%; height: auto; }
     padding: 10px 0;
     box-shadow: var(--shadow-hover);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    
     display: flex;
     flex-direction: column;
 }
@@ -262,7 +276,7 @@ img { max-width: 100%; height: auto; }
     padding: 10px 20px;
 }
 
-/* Header Actions (Carrito) */
+/* Carrito de Compras (Opcional) */
 .header-actions {
     display: flex;
     align-items: center;
@@ -292,7 +306,7 @@ img { max-width: 100%; height: auto; }
     justify-content: center;
 }
 
-/* Menu Toggle (Móvil) */
+/* Botón Hamburguesa (Móvil) */
 .menu-toggle {
     display: none;
     background: transparent;
@@ -309,10 +323,10 @@ img { max-width: 100%; height: auto; }
     transition: var(--transition);
 }
 
-/* --- 4. Hero Section (Parallax & Swiper) --- */
+/* --- 5. HERO SECTION (Parallax & Swiper Layout) --- */
 .hero {
     position: relative;
-    height: 100vh; /* Ocupa toda la pantalla */
+    height: 100vh;
     width: 100%;
     overflow: hidden;
     color: var(--white);
@@ -330,7 +344,7 @@ img { max-width: 100%; height: auto; }
 .hero-swiper .swiper-slide {
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Efecto Parallax */
+    background-attachment: fixed; /* Efecto Parallax en Escritorio */
 }
 
 .hero-overlay {
@@ -339,7 +353,7 @@ img { max-width: 100%; height: auto; }
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(10,37,64,0.7) 0%, rgba(10,37,64,0.9) 100%);
+    background: linear-gradient(to bottom, rgba(10, 37, 64, 0.7) 0%, rgba(10, 37, 64, 0.9) 100%);
     z-index: 2;
 }
 
@@ -351,19 +365,19 @@ img { max-width: 100%; height: auto; }
     justify-content: center;
     align-items: flex-start;
     height: 100%;
-    padding-top: 80px; /* Offset del navbar sticky */
-    max-width: 700px;
+    padding-top: 80px; /* Offset Navbar */
+    max-width: 720px;
 }
 
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.15;
     margin-bottom: 20px;
 }
 
 .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 300;
     margin-bottom: 40px;
     opacity: 0.9;
@@ -384,25 +398,72 @@ img { max-width: 100%; height: auto; }
     opacity: 1;
 }
 
-/* --- 5. Catalogo (Grid Responsivo & Cards Premium) --- */
-#catalogo {
-    padding: 100px 20px;
-}
-
+/* --- 6. SECTIONS HEADERS --- */
 .section-header {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 }
 
 .section-title {
     font-size: 2.5rem;
     font-weight: 600;
+    color: var(--text-dark);
+}
+
+.workflow-section .section-title {
+    color: var(--text-dark);
 }
 
 .section-subtitle {
-    color: rgba(26,26,26,0.6);
+    color: rgba(26, 26, 26, 0.6);
     font-size: 1rem;
     margin-top: 5px;
+}
+
+/* --- 7. FILTROS RÁPIDOS DE CATEGORÍAS --- */
+.catalog-filters {
+    margin-bottom: 50px;
+}
+
+.catalog-filters ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: var(--text-light);
+    color: var(--text-dark);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    background-color: var(--primary-navy);
+    color: var(--white);
+    border-color: var(--primary-navy);
+    box-shadow: var(--shadow-soft);
+}
+
+.filter-btn.active {
+    background-color: var(--accent-cyan);
+    color: var(--primary-navy);
+    border-color: var(--accent-cyan);
+    font-weight: 600;
+    box-shadow: var(--shadow-soft);
+}
+
+/* --- 8. CATÁLOGO GRID & PRODUCT CARDS --- */
+#catalogo {
+    padding: 100px 20px;
 }
 
 .catalogo-grid {
@@ -410,24 +471,33 @@ img { max-width: 100%; height: auto; }
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
 }
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    transform-style: preserve-3d; /* Permite profundidad 3D */
+    perspective: 1000px;
+}
 
-/* --- Estilo Tarjeta --- */
+/* Estilo Tarjeta Base */
 .product-card {
     background-color: var(--card-bg);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0, 0, 0, 0.02);
     transition: var(--transition);
-    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-hover);
-    border-color: rgba(0,217,255,0.1); /* Sutil cyan */
+    border-color: rgba(0, 217, 255, 0.15);
 }
 
-/* Contenedor estándar (Para tarjetas fijas SIN carrusel) */
+/* Contenedor Estático de Imagen */
 .card-img-container {
     width: 100%;
     height: 250px;
@@ -436,25 +506,26 @@ img { max-width: 100%; height: auto; }
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .card-img-container img {
     height: 80%;
+    width: auto;
     object-fit: contain;
     transition: var(--transition);
 }
 
 .product-card:hover .card-img-container img {
-    transform: scale(1.1); /* Efecto zoom suave */
+    transform: scale(1.08);
 }
 
-/* --- Swiper interno en card (Corregido y Limpio) --- */
+/* Contenedor Especial para Tarjeta con Carrusel Interno Swiper */
 .card-img-container.product-swiper-container {
     padding: 0;
-    display: block; 
-    position: relative;
-    height: 250px; /* Asegura que mantenga la misma altura exacta que las fijas */
-    background-color: #fcfcfc; /* Unifica el fondo del bloque */
+    display: block;
+    height: 250px;
+    background-color: #FCFCFC;
 }
 
 .product-swiper {
@@ -462,29 +533,43 @@ img { max-width: 100%; height: auto; }
     height: 100%;
 }
 
-/* Forzamos al contenedor interno de Swiper a centrar el contenido */
 .product-swiper .swiper-slide {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: #fcfcfc;
+    background-color: #FCFCFC;
 }
 
-/* Las imágenes del carrusel: achicadas un toque para que NO se corten */
 .product-swiper .swiper-slide img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: contain !important; /* Muestra el producto entero */
+    object-fit: contain !important;
     max-height: 250px !important;
-    padding: 15px;                  /* Le da aire alrededor para que la silueta se luzca libre */
-    box-sizing: border-box;         /* Evita que el padding rompa la proporción */
+    padding: 15px;
+    box-sizing: border-box;
+    transition: none; /* Evita conflictos con el arrastre de Swiper */
 }
 
-/* --- Cuerpo y detalles de la Tarjeta --- */
+.product-card:hover .product-swiper-container .swiper-slide img {
+    transform: none; /* No aplicamos zoom global al carrusel completo */
+}
+
+.product-swiper .swiper-pagination {
+    bottom: 10px !important;
+}
+
+.product-swiper .swiper-pagination-bullet-active {
+    background: var(--accent-cyan) !important;
+}
+
+/* Cuerpo de la Tarjeta */
 .card-body {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .category {
@@ -492,13 +577,14 @@ img { max-width: 100%; height: auto; }
     font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: rgba(26,26,26,0.5);
-    margin-bottom: 5px;
+    color: rgba(26, 26, 26, 0.5);
+    margin-bottom: 6px;
+    align-self: flex-start;
 }
 
 .category.premium {
     color: var(--accent-cyan);
-    background-color: rgba(0,217,255,0.05);
+    background-color: rgba(0, 217, 255, 0.06);
     padding: 2px 8px;
     border-radius: 4px;
 }
@@ -507,22 +593,29 @@ img { max-width: 100%; height: auto; }
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 10px;
+    color: var(--text-dark);
 }
 
 .desc {
     font-size: 0.9rem;
-    color: rgba(26,26,26,0.7);
-    margin-bottom: 25px;
-    height: 40px; /* Limitar texto */
+    color: rgba(26, 26, 26, 0.7);
+    margin-bottom: 20px;
+    height: 45px;
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2; /* propiedad estándar que te pide el editor */
+    -webkit-box-orient: vertical;
 }
 
+/* Footer de la Tarjeta */
 .card-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
     padding-top: 15px;
+    margin-top: auto; /* Empuja el footer siempre al fondo */
 }
 
 .price {
@@ -530,27 +623,106 @@ img { max-width: 100%; height: auto; }
     font-weight: 700;
     color: var(--primary-navy);
 }
-/* Card Destacada (Mas grande) */
+
+/* Variante: Tarjeta Destacada Highlight (Ocupa dos columnas) */
 .product-card.highlight {
-    grid-column: span 2; /* Ocupa dos columnas */
-    display: flex;
-    align-items: center;
+    grid-column: span 2;
+    flex-direction: row;
 }
 
 .product-card.highlight .card-img-container {
     width: 50%;
     height: 100%;
+    min-height: 320px;
 }
 
 .product-card.highlight .card-body {
     width: 50%;
+    justify-content: center;
+    padding: 35px;
 }
 
-/* --- 6. Footer --- */
+/* --- 9. SECCIÓN PROCESO DE TRABAJO 3D (Workflow) --- */
+.workflow-section {
+    background-color: var(--text-light); /* Fondo suave claro */
+    padding: 100px 0;
+}
+
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.workflow-card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    transition: var(--transition);
+}
+
+.workflow-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+.workflow-card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(0, 0, 0, 0.01);
+    
+    /* Esta propiedad asegura que las animaciones de scroll de AOS y el hover convivan con fluidez */
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.workflow-icon-box {
+    color: var(--primary-navy);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(50, 87, 124, 0.06);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.workflow-card:hover .workflow-icon-box {
+    color: var(--accent-cyan);
+    background-color: rgba(10, 37, 64, 0.95);
+}
+
+.workflow-step-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.workflow-step-desc {
+    font-size: 0.9rem;
+    color: rgba(26, 26, 26, 0.7);
+    line-height: 1.5;
+}
+
+.workflow-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- 10. FOOTER MARCA --- */
 .footer {
     background-color: var(--primary-navy);
     color: var(--text-light);
-    padding: 80px 20px 20px;
+    padding: 80px 20px 25px;
 }
 
 .footer-grid {
@@ -560,42 +732,58 @@ img { max-width: 100%; height: auto; }
     margin-bottom: 50px;
 }
 
-.logo-white {
-    height: 50px;
-    object-fit: contain;
-    filter: brightness(0) invert(1); /* Volver blanco el logo */
-    margin-bottom: 15px;
-}
-
-.footer h4 { margin-bottom: 20px; font-weight: 600; }
-.footer p { font-size: 0.9rem; color: rgba(244,247,246,0.7); margin-bottom: 10px; }
-.footer a { font-size: 0.9rem; display: block; margin-bottom: 8px; color: rgba(244,247,246,0.7); }
-.footer a:hover { color: var(--accent-cyan); }
-
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.05);
-    padding-top: 20px;
-    text-align: center;
-    font-size: 0.8rem;
-}
-
-/* Selector específico para el logo dentro del footer grid */
 .footer-logo img.logo {
     width: 65px;
     height: 65px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
-    background-color: #ffffff;
+    background-color: var(--white);
     border: 2px solid var(--accent-cyan);
-    box-sizing: border-box;
     display: block;
-    margin-bottom: 15px; /* Separa el logo circular del texto de abajo */
+    margin-bottom: 15px;
 }
 
-/* --- 7. Componentes Extras (WhatsApp & Lightbox) --- */
+.footer-logo p {
+    font-size: 0.9rem;
+    color: rgba(244, 247, 246, 0.7);
+    margin-top: 10px;
+}
 
-/* WhatsApp Flotante Novedoso */
+.footer h4 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--white);
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: rgba(244, 247, 246, 0.75);
+    margin-bottom: 10px;
+}
+
+.footer a {
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 10px;
+    color: rgba(244, 247, 246, 0.75);
+}
+
+.footer a:hover {
+    color: var(--accent-cyan);
+    padding-left: 4px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 25px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(244, 247, 246, 0.5);
+}
+
+/* --- 11. COMPONENTES INTERACTIVOS (Floating WA & Lightbox) --- */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -607,113 +795,201 @@ img { max-width: 100%; height: auto; }
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 5px 15px rgba(37,211,102,0.3);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
     z-index: 999;
     transition: var(--transition);
 }
 
-.whatsapp-float img { width: 35px; }
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
 
 .whatsapp-float:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 20px rgba(37,211,102,0.4);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
 }
 
-/* Lightbox Mejorado */
+/* Lightbox Modal */
 .lightbox {
     display: none;
     position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.9);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
     z-index: 2000;
     align-items: center;
     justify-content: center;
 }
 
-.lightbox.active { display: flex; }
-.lightbox-content { max-width: 90%; max-height: 90%; }
-.lightbox-close {
-    position: absolute; top: 30px; right: 30px;
-    color: white; font-size: 2rem; cursor: pointer;
-}
-
-/* --- Ajuste para Swiper dentro de las Tarjetas --- */
-.card-img-container.product-swiper-container {
-    padding: 0;
-    display: block; /* Desactivamos el flex global solo aquí para no romper a Swiper */
-    position: relative;
-}
-
-.product-swiper {
-    width: 100%;
-    height: 100%;
-}
-
-/* Forzamos a que las imágenes dentro del carrusel ocupen el espacio correcto */
-.product-swiper .swiper-slide {
+.lightbox.active {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
 }
 
-.product-swiper .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cambiá a 'contain' si preferís que la foto no se recorte nada */
-    max-height: 250px;
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
 }
 
-/* Posición de los puntitos de paginación del producto */
-.product-swiper .swiper-pagination {
-    bottom: 10px !important;
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: var(--white);
+    font-size: 2.5rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: var(--transition);
 }
 
-.product-swiper .swiper-pagination-bullet-active {
-    background: var(--accent-cyan) !important;
+.lightbox-close:hover {
+    color: var(--accent-cyan);
 }
 
-/* --- 8. Media Queries (Responsividad) --- */
+/* --- 12. MEDIA QUERIES (RESPONSIVIDAD INTEGRAL) --- */
 
 @media (max-width: 992px) {
-    .hero-title { font-size: 2.8rem; }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
-    .product-card.highlight { grid-column: span 1; flex-direction: column; }
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .workflow-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .product-card.highlight {
+        grid-column: span 1;
+        flex-direction: column;
+    }
+    
     .product-card.highlight .card-img-container,
-    .product-card.highlight .card-body { width: 100%; }
+    .product-card.highlight .card-body {
+        width: 100%;
+    }
+    
+    .product-card.highlight .card-img-container {
+        min-height: 250px;
+        height: 250px;
+    }
 }
 
 @media (max-width: 768px) {
-    /* Navbar móvil */
-    .menu-toggle { display: block; z-index: 1001; }
+    /* Menú Hamburguesa Funcional en Móvil */
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+    
     .main-nav {
         position: fixed;
-        top: 0; left: -100%;
-        width: 80%; height: 100vh;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
         background-color: var(--primary-navy);
         z-index: 1000;
         transition: var(--transition);
-        padding: 100px 40px;
+        padding: 120px 40px;
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
     }
-    .main-nav.active { left: 0; }
-    .main-nav ul { flex-direction: column; gap: 15px; }
     
-    /* Dropdowns en móvil */
+    .main-nav.active {
+        left: 0;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+    /* Adaptaciones de Dropdowns en Entorno Móvil */
     .dropdown-content, .submenu-content {
-        position: relative; top: 0; left: 0;
-        width: 100%; opacity: 1; visibility: visible;
-        transform: none; background: rgba(255,255,255,0.05);
-        display: none; /* Se abrirá con JS */
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background-color: rgba(255, 255, 255, 0.05);
+        display: none; /* Controlado dinámicamente mediante JS */
+        box-shadow: none;
+        border: none;
+        padding: 5px 0;
     }
     
-    .hero { height: auto; padding-top: 80px; padding-bottom: 80px; }
-    .hero-swiper { position: relative; height: 300px; order: 2; }
-    .hero-content { padding: 40px 20px; order: 1; }
-    .hero-title { font-size: 2.3rem; }
+    /* Hero Adaptativo */
+    .hero {
+        height: auto;
+        padding-top: 80px;
+        padding-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+    }
     
-    .section-title { font-size: 2rem; }
-    .catalogo-grid { grid-template-columns: 1fr; }
+    .hero-swiper {
+        position: relative;
+        height: 320px;
+        order: 2;
+    }
     
-    .footer-grid { grid-template-columns: 1fr; }
+    .hero-swiper .swiper-slide {
+        background-attachment: scroll; /* Desactiva parallax por rendimiento en celulares */
+    }
+    
+    .hero-content {
+        padding: 40px 20px;
+        order: 1;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .hero-title {
+        font-size: 2.25rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    /* Layouts y Grillas Flexibles */
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .workflow-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .workflow-card {
+        padding: 30px 20px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+    }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,137 +9,157 @@
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
     <script defer src="../js/main.js"></script>
-
 </head>
 <body>
 
-  <!-- HEADER -->
-<header class="navbar">
-  <div class="logo-container">
-    <img src="../assets/img/logo.png" alt="Logo 3DEEN" class="logo">
-  </div>
+ <!-- ======================== HEADER / NAVBAR ======================== -->
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <div class="logo-container">
+        <!-- Reemplazar por tu PNG transparente -->
+        <img src="../assets/img/logo (1).jpg" alt="Logo 3DEEN" class="logo">
+      </div>
 
-  <!-- Botón hamburguesa -->
-  <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-  <!-- Contenedor de navegación -->
-  <div class="nav-container">
-    <nav>
-      <a href="../index.html">Inicio</a>
-
-      <!-- Dropdown -->
-      <div class="dropdown">
-        <a href="#">Productos ▾</a>
-        <div class="dropdown-content">
-          <a href="../pages/mates.html">Mates</a>
-          <a href="../pages/llaveros.html">Llaveros 3D</a>
-          <a href="#macetas">Macetas</a>
-          <a href="#">Miniaturas</a>
-          <div class="columna">
-            <h4>Soportes</h4>
-            <ul>
-              <li><a href="./pages/soporte-celulares.html">Para Celulares</a></li>
-              <li><a href="#notebooks">Para Notebook</a></li>
-              <li><a href="#auriculares">Para Auriculares</a></li>
-              <li><a href="#tablet">Para Tablet</a></li>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Productos ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="../pages/mates.html">Mates</a></li>
+              <li><a href="../pages/llaveros.html">Llaveros 3D</a></li>
+              <li><a href="#macetas">Macetas</a></li>
+              <li><a href="#">Miniaturas</a></li>
+              <li class="submenu">
+                <a href="#">Soportes ▸</a>
+                <ul class="submenu-content">
+                  <li><a href="./pages/soporte-celulares.html">Celulares</a></li>
+                  <li><a href="#notebooks">Notebooks</a></li>
+                  <li><a href="#auriculares">Auriculares</a></li>
+                </ul>
+              </li>
             </ul>
+          </li>
+          <li><a href="../contacto.html">Personalizados</a></li>
+          <li><a href="../pages/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- <div class="header-actions">
+        <div class="cart">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-count">0</span>
+        </div>
+      </div> -->
+    </div>
+  </header>
+
+    <main style="padding: 40px 20px; max-width: 1200px; margin: 0 auto;">
+      <h2 style="text-align: center; margin-bottom: 30px; font-size: 2rem; color: var(--primary-navy);">Soportes para Celulares</h2>
+
+      <section class="catalogo-grid">
+
+        <article class="product-card">
+          
+          <div class="card-img-container product-swiper-container">
+            <div class="swiper product-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="../assets/img/soporte-celu-1jpg-removebg-preview.png" alt="Soporte plegable para celular vista 1">
+                </div>
+                <div class="swiper-slide">
+                  <img src="../assets/img/soporte-celu-2jpg.jpg" alt="Soporte plegable para celular vista 2">
+                </div>
+                <div class="swiper-slide">
+                  <img src="../assets/img/soporte-celu-removebg-preview.png" alt="Soporte plegable para celular vista 3">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
           </div>
+
+          <div class="card-body">
+            <span class="category">Oficina</span>
+            <h3 class="product-title">Soporte Plegable para Celular</h3>
+            <p class="desc">Versátil, ergonómico y ultra resistente. Se pliega por completo para llevarlo en el bolsillo.</p>
+            <div class="card-footer">
+              <p class="price">$4.500</p>
+              <a class="btn-whatsapp" href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Soporte%20Plegable%20para%20Celular%20por%20$4.500" target="_blank">
+                Consultar
+              </a>
+            </div>
+          </div>
+
+        </article>
+
+        <article class="product-card">
+          
+          <div class="card-img-container product-swiper-container">
+            <div class="swiper product-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="../assets/img/org-1.png" alt="Organizador de oficina 3D vista frontal">
+                </div>
+                <div class="swiper-slide">
+                  <img src="../assets/img/org-2.png" alt="Organizador de oficina 3D vista lateral">
+                </div>
+                <div class="swiper-slide">
+                  <img src="../assets/img/org-3.png" alt="Organizador de oficina 3D con módulos">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <span class="category">Escritorio</span>
+            <h3 class="product-title">Organizador de Oficina Modular</h3>
+            <p class="desc">Estructura todo en uno. Cuenta con espacio porta lápices, bandeja interna y soporte integrado.</p>
+            <div class="card-footer">
+              <p class="price">$26.000</p>
+              <a class="btn-whatsapp" href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Organizador%20de%20Oficina%20Modular%20por%20$26.000" target="_blank">
+                Consultar
+              </a>
+            </div>
+          </div>
+
+        </article>
+
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-logo">
+          <img src="../assets/img/logo (1).jpg" alt="Logo 3DEEN" class="logo">
+          <p>Innovación impresa, estilo que perdura.</p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <p>📧 contacto@3deen.com</p>
+          <p>📱 +54 261 56 32792</p>
+          <p>📍 Mendoza, Argentina</p>
+        </div>
+        <div class="footer-social">
+          <h4>Síguenos</h4>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
         </div>
       </div>
-
-      <a href="#">Personalizados</a>
-      <a href="./pages/contacto.html">Contacto</a>
-    </nav>
-  </div>
-
-  <!-- Carrito -->
-  <div class="cart">
-    🛒<span class="cart-count">0</span>
-  </div>
-</header>
-
-
-<main>
-  <h2>Soporte para Celulares</h2>
-
-  <section class="products-grid">
-
-    <!-- Producto: Soporte plegable -->
-    <article class="card">
-      <div class="swiper product-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="../assets/img/soporte-celu-1jpg-removebg-preview.png" alt="Soporte plegable para celular vista 1">
-          </div>
-          <div class="swiper-slide">
-            <img src="../assets/img/soporte-celu-2jpg.jpg" alt="Soporte plegable para celular vista 2">
-          </div>
-          <div class="swiper-slide">
-            <img src="../assets/img/soporte-celu-removebg-preview.png" alt="Soporte plegable para celular vista 3">
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
+      <div class="container footer-bottom">
+        <p>&copy; 2026 3DEEN | Todos los derechos reservados</p>
       </div>
+    </footer>
 
-      <h3>Soporte Plegable para Celular</h3>
-      <p class="price">$4.500</p>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-      <p>
-        Soporte plegable para celular que ofrece comodidad, versatilidad y estilo.
-        Se pliega fácilmente para llevarlo a cualquier lugar y brinda un ángulo perfecto.
-        Ligero, resistente y listo para usar desde el primer momento.
-      </p>
-
-      <a
-        class="btn btn-primary"
-        href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Soporte%20Plegable%20para%20Celular"
-        target="_blank">
-        Consultar por WhatsApp
-      </a>
-    </article>
-
-    <!-- Producto: Organizador de oficina -->
-    <article class="card">
-      <div class="swiper product-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="../assets/img/org-1.png" alt="Organizador de oficina 3D vista frontal">
-          </div>
-          <div class="swiper-slide">
-            <img src="../assets/img/org-2.png" alt="Organizador de oficina 3D vista lateral">
-          </div>
-          <div class="swiper-slide">
-            <img src="../assets/img/org-3.png" alt="Organizador de oficina 3D con módulos">
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-
-      <h3>Organizador de Oficina Modular 3D</h3>
-      <p class="price">$26.000</p>
-
-      <p>
-        Organizador de escritorio impreso en 3D, con diseño modular y funcional.
-        Incluye bandeja de almacenamiento, porta bolígrafos y soporte para celular.
-        Ideal para mantener el escritorio ordenado, con un estilo moderno y resistente.
-      </p>
-
-      <a
-        class="btn btn-primary"
-        href="https://wa.me/5492615632792?text=Hola%2C%20quiero%20comprar%20el%20Organizador%20de%20Oficina%20Modular%203D"
-        target="_blank">
-        Consultar por WhatsApp
-      </a>
-    </article>
-
-  </section>
-</main>
-
-
-<footer>
-  <p>© 2026 3DEEN - Impresión 3D</p>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>

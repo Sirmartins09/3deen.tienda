@@ -13,52 +13,53 @@
 </head>
 <body>
 
-    <!-- HEADER UNIFICADO -->
-    <header class="navbar">
+   <!-- ======================== HEADER / NAVBAR ======================== -->
+  <header class="navbar">
+    <div class="container nav-wrapper">
       <div class="logo-container">
-        <img src="../assets/img/watermarked_img_6781641255694717982.png" alt="Logo 3DEEN" class="logo">
+        <!-- Reemplazar por tu PNG transparente -->
+        <img src="../assets/img/logo (1).jpg" alt="Logo 3DEEN" class="logo">
       </div>
 
-      <!-- Botón hamburguesa -->
-      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-      <!-- Contenedor de navegación -->
-      <div class="nav-container">
-        <nav>
-          <a href="../index.html">Inicio</a>
-
-          <!-- Dropdown -->
-          <div class="dropdown">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="../index.html" class="active">Inicio</a></li>
+          <li class="dropdown">
             <a href="#">Productos ▾</a>
-            <div class="dropdown-content">
-              <a href="./mates.html">Mates</a>
-              <a href="./llaveros.html">Llaveros 3D</a>
-              <a href="../index.html#macetas">Macetas</a>
-              <a href="#">Miniaturas</a>
-              
-              <!-- Submenú Soportes -->
-              <div class="submenu">
+            <ul class="dropdown-content">
+              <li><a href="../pages/mates.html">Mates</a></li>
+              <li><a href="../pages/llaveros.html">Llaveros 3D</a></li>
+              <li><a href="#macetas">Macetas</a></li>
+              <li><a href="#">Miniaturas</a></li>
+              <li class="submenu">
                 <a href="#">Soportes ▸</a>
-                <div class="submenu-content">
-                  <a href="./soporte-celulares.html">Para Celulares</a>
-                  <a href="../index.html#notebooks">Para Notebook</a>
-                  <a href="../index.html#auriculares">Para Auriculares</a>
-                  <a href="../index.html#tablet">Para Tablet</a>
-                </div>
-              </div>
-            </div>
-          </div>
+                <ul class="submenu-content">
+                  <li><a href="../pages/soporte-celulares.html">Celulares</a></li>
+                  <li><a href="#notebooks">Notebooks</a></li>
+                  <li><a href="#auriculares">Auriculares</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="../contacto.html">Personalizados</a></li>
+          <li><a href="../pages/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
 
-          <a href="#">Personalizados</a>
-          <a href="./contacto.html" class="active">Contacto</a>
-        </nav>
-      </div>
-
-      <!-- Carrito -->
-      <div class="cart">
-        🛒<span class="cart-count">0</span>
-      </div>
-    </header>
+      <!-- <div class="header-actions">
+        <div class="cart">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-count">0</span>
+        </div>
+      </div> -->
+    </div>
+  </header>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main id="contacto" style="padding: 60px 20px; max-width: 1000px; margin: 0 auto;">
@@ -108,7 +109,7 @@
     <footer class="footer">
       <div class="container footer-grid">
         <div class="footer-logo">
-          <img src="../assets/img/watermarked_img_6781641255694717982.png" alt="Logo 3DEEN" class="logo">
+          <img src="../assets/img/logo (1).jpg" alt="Logo 3DEEN" class="logo">
           <p>Innovación impresa, estilo que perdura.</p>
         </div>
         <div class="footer-contact">
