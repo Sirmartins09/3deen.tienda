@@ -608,6 +608,123 @@ img {
     -webkit-box-orient: vertical;
 }
 
+/* ==========================================================================
+   SECCIÓN: ESTATUAS 3D PERSONALIZADAS (ESTILOS LIMPIOS)
+   ========================================================================== */
+.statue-service-section {
+    padding: 60px 0;
+    background-color: #fafbfc;
+    border-top: 1px solid rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.category-tag {
+    display: inline-block;
+    background-color: rgba(0, 180, 219, 0.1);
+    color: #0083b0;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.statue-showcase-grid {
+    margin-top: 40px;
+}
+/* Contenedor hero para centrar la imagen entre el título y la grilla */
+.statue-hero-img-container {
+    max-width: 500px;       /* Ancho máximo de la foto (podés probar 450px o 550px a tu gusto) */
+    margin: 25px auto 40px auto; /* Centra horizontalmente y le da espacio arriba y abajo */
+    width: 100%;
+}
+
+.statue-hero-img-container img {
+    width: 100%;            /* Ocupa el ancho completo del contenedor */
+    height: auto;           /* Mantiene la relación de aspecto sin deformar */
+    display: block;
+    border-radius: 12px;    /* Bordes redondeados sutiles */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06); /* Sombra elegante */
+}
+
+@media (min-width: 768px) {
+    .statue-showcase-grid {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        border-spacing: 30px 0;
+    }
+    .statue-visual-flow, .statue-info-card {
+        display: table-cell;
+        vertical-align: top;
+    }
+}
+
+.flow-step-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.01);
+}
+
+.flow-number {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-color: #0083b0;
+    color: #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-right: 12px;
+}
+
+.statue-info-card {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.statue-pricing-box {
+    background: linear-gradient(to right, #f8fafc, #f1f5f9);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+    border-left: 4px solid #0083b0;
+}
+
+.price-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.price-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 5px 0;
+}
+
+.btn-cta-statue {
+    display: block;
+    text-align: center;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+}
+
 /* Footer de la Tarjeta */
 .card-footer {
     display: flex;
